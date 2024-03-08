@@ -37,3 +37,11 @@ Route::get('/multiplicar', function () {
         $idade = $request->input('idade');
         return 'Meu nome é Ana ' . $nome . ' Minha idade é ' . $idade;
     });
+
+    Route::get('receber/nascimento/cidade', function (Request $request) {
+        $nome = $request->input('name');
+        $cidade = $request->input('cidade');
+        $nascimento = $request->input('nascimento');
+    
+        return 'Meu nome é' . $nome . ' Minha idade é ' . $nascimento . 'Na cidade de' . $cidade;
+    });
