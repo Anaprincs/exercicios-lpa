@@ -61,3 +61,12 @@ Route::get('/multiplicar', function () {
         return 'O resultado da subtrcao dos numeros: ' .
             $primeiroNumero . ' - ' . $segundoNumero . ' = ' . $resultado;
     });
+
+    Route::get('receber/divisao', function (Request $request) {
+        $primeiroNumero = $request->input('numero');
+        $segundoNumero = $request->input('numerodois');
+        $resultado = $primeiroNumero / $segundoNumero;
+        return ' O resultado da divisão dos numeros: ' .
+            $primeiroNumero . '/' . $segundoNumero . '=' . $resultado;
+    });
+    
