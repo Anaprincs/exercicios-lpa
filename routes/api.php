@@ -45,3 +45,11 @@ Route::get('/multiplicar', function () {
     
         return 'Meu nome é' . $nome . ' Minha idade é ' . $nascimento . 'Na cidade de' . $cidade;
     });
+
+    Route::get('receber/soma', function (Request $request) {
+        $primeironumero = $request->input('numero');
+        $segundonumero = $request->input('numerodois');
+        $resultado = $primeironumero + $segundonumero;
+        return ' O resultado da soma dos numeros: ' .
+            $primeironumero . ' + ' . $segundonumero . ' = ' . $resultado;
+    });
