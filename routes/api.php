@@ -26,3 +26,8 @@ Route::get('/multiplicar', function () {
         $nome = 'Minha gatinha';
         return $nome;
     });
+
+    Route::get('receber/nome', function (Request $request) {
+        $nome = $request->input('name');
+        return $nome;
+    });
