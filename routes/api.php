@@ -31,3 +31,9 @@ Route::get('/multiplicar', function () {
         $nome = $request->input('name');
         return $nome;
     });
+
+    Route::get('receber/nome/idade', function (Request $request) {
+        $nome = $request->input('name');
+        $idade = $request->input('idade');
+        return 'Meu nome é Ana ' . $nome . ' Minha idade é ' . $idade;
+    });
