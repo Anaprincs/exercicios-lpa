@@ -87,3 +87,10 @@ Route::get('/multiplicar', function () {
         $resultado = $primeiraNota + $segundaNota + $terceiraNota + $quartaNota + $quintaNota / 5;
         return ' O resultado da media das notas é: ' .  $resultado;
     });
+
+    Route::get('receber/divisao', function (Request $request) {
+        $primeiroNumero = $request->input('numero1');
+        $segundoNumero = $request->input('numero2');
+        $resultado = $segundoNumero / $primeiroNumero;
+        return 'O resultado da divisao é:' . $segundoNumero . ' / ' . $primeiroNumero . '=' . $resultado;
+    });
