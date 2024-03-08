@@ -70,3 +70,10 @@ Route::get('/multiplicar', function () {
             $primeiroNumero . '/' . $segundoNumero . '=' . $resultado;
     });
     
+    Route::get('receber/multiplicaçao', function (Request $request) {
+        $primeiroNumero = $request->input('numero');
+        $segundoNumero = $request->input('numerodois');
+        $resultado = $primeiroNumero * $segundoNumero;
+        return ' O resultado da multiplicação dos numeros: ' .
+            $primeiroNumero . " * " . $segundoNumero . ' = ' . $resultado;
+    });
