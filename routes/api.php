@@ -136,3 +136,11 @@ Route::get('/multiplicar', function () {
         $comissao= $vendas * $porcentagem / 100;
         return " A comissão dele é" . $comissao;
     });
+
+    Route::get('receber/horas', function (Request $request){
+        $numerodeDias=$request->input('valor');
+        $horas=$numerodeDias * 24;
+        $minutos=$horas * 60;
+        $segundos=$minutos * 60;
+        return ' Em ' . $numerodeDias . ' dias' . ' há ' . $horas . ' horas ' . $minutos . ' minutos ' . ' e ' . $segundos . ' segundos .' ;
+    });
