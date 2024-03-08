@@ -20,3 +20,9 @@ Route::get('/multiplicar', function () {
     return ' O resultado da multiplicação dos numeros: ' .
         $primeiroNumero . ' x ' . $segundoNumero . ' = ' . $resultado;
     });
+
+    Route::get('/alterar', function () {
+        $nome = 'gatinha';
+        $nome = 'Minha gatinha';
+        return $nome;
+    });
