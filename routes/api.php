@@ -77,3 +77,13 @@ Route::get('/multiplicar', function () {
         return ' O resultado da multiplicação dos numeros: ' .
             $primeiroNumero . " * " . $segundoNumero . ' = ' . $resultado;
     });
+
+    Route::get('receber/media', function (Request $request) {
+        $primeiraNota = $request->input('nota1');
+        $segundaNota = $request->input('nota2');
+        $terceiraNota = $request->input('nota3');
+        $quartaNota = $request->input('nota4');
+        $quintaNota = $request->input('nota5');
+        $resultado = $primeiraNota + $segundaNota + $terceiraNota + $quartaNota + $quintaNota / 5;
+        return ' O resultado da media das notas é: ' .  $resultado;
+    });
