@@ -123,3 +123,9 @@ Route::get('/multiplicar', function () {
         $resultado = $salario + $aumento;
         return 'O salario inicial é de ' . $salario . ' e receberá um aumento de ' . $aumento . ' e o salaro atual é ' . $resultado;
     });
+
+    Route::get('receber/compra', function (Request $request) {
+        $compra = $request->input('valor');
+        $pontos = $compra / 10;
+        return " A quantidade de pontos que ele terá é " . $pontos;
+    });
