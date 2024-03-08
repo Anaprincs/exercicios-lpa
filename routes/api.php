@@ -53,3 +53,11 @@ Route::get('/multiplicar', function () {
         return ' O resultado da soma dos numeros: ' .
             $primeironumero . ' + ' . $segundonumero . ' = ' . $resultado;
     });
+
+    Route::get('receber/subtracao', function (Request $request) {
+        $primeiroNumero = $request->input('numero');
+        $segundoNumero = $request->input('numerodois');
+        $resultado = $primeiroNumero - $segundoNumero;
+        return 'O resultado da subtrcao dos numeros: ' .
+            $primeiroNumero . ' - ' . $segundoNumero . ' = ' . $resultado;
+    });
