@@ -107,3 +107,11 @@ Route::get('/multiplicar', function () {
         $resultado = $comprimento * $largura;
         return 'A area do triangulo é' . $resultado;
     });
+
+    Route::get('receber/valor', function (Request $request) {
+        $valororiginal = $request->input('valor');
+        $porcentagem = $request->input('porcentagem');
+        $desconto = $valororiginal * $porcentagem / 100;
+        $resultado = $valororiginal  - $porcentagem;
+        return 'o resultado é' . $resultado;
+    });
