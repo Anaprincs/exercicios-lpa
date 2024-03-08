@@ -100,3 +100,10 @@ Route::get('/multiplicar', function () {
         $resultado = $primeiroNumero * 2;
         return ' O dobro do numero ' . $primeiroNumero . ' é igual á:' . $resultado;
     });
+
+    Route::get('receber/area', function (Request $request) {
+        $comprimento = $request->input('numero1');
+        $largura = $request->input('numero2');
+        $resultado = $comprimento * $largura;
+        return 'A area do triangulo é' . $resultado;
+    });
