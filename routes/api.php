@@ -94,3 +94,9 @@ Route::get('/multiplicar', function () {
         $resultado = $segundoNumero / $primeiroNumero;
         return 'O resultado da divisao é:' . $segundoNumero . ' / ' . $primeiroNumero . '=' . $resultado;
     });
+
+    Route::get('receber/dobro', function (Request $request) {
+        $primeiroNumero = $request->input('numero1');
+        $resultado = $primeiroNumero * 2;
+        return ' O dobro do numero ' . $primeiroNumero . ' é igual á:' . $resultado;
+    });
