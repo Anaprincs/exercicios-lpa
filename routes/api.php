@@ -144,3 +144,10 @@ Route::get('/multiplicar', function () {
         $segundos=$minutos * 60;
         return ' Em ' . $numerodeDias . ' dias' . ' há ' . $horas . ' horas ' . $minutos . ' minutos ' . ' e ' . $segundos . ' segundos .' ;
     });
+
+    Route::get('receber/produto', function (Request $request){
+        $preço=$request->input('valor');
+        $compra=$request->input('valor2');
+        $totalcompra= $preço * $compra;
+        return ' o total da compra é ' .  $totalcompra;
+    });
