@@ -12,3 +12,11 @@ Route::get('/variavel', function () {
     $sobrenome = ' Hipólito';
     return $nome . ' ' . $sobrenome;
 });
+
+Route::get('/multiplicar', function () {
+    $primeiroNumero = 10;
+    $segundoNumero = 20;
+    $resultado = $primeiroNumero * $segundoNumero;
+    return ' O resultado da multiplicação dos numeros: ' .
+        $primeiroNumero . ' x ' . $segundoNumero . ' = ' . $resultado;
+    });
