@@ -129,3 +129,10 @@ Route::get('/multiplicar', function () {
         $pontos = $compra / 10;
         return " A quantidade de pontos que ele terá é " . $pontos;
     });
+
+    Route::get('receber/comissao', function (Request $request) {
+        $vendas=$request->input('valor');
+        $porcentagem=$request->input('porcentagem');
+        $comissao= $vendas * $porcentagem / 100;
+        return " A comissão dele é" . $comissao;
+    });
