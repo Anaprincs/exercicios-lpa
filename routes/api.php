@@ -115,3 +115,11 @@ Route::get('/multiplicar', function () {
         $resultado = $valororiginal  - $porcentagem;
         return 'o resultado é' . $resultado;
     });
+
+    Route::get('receber/salario', function (Request $request) {
+        $salario = $request->input('valor');
+        $porcentagem = $request->input('porcentagem');
+        $aumento = $salario * $porcentagem / 100;
+        $resultado = $salario + $aumento;
+        return 'O salario inicial é de ' . $salario . ' e receberá um aumento de ' . $aumento . ' e o salaro atual é ' . $resultado;
+    });
