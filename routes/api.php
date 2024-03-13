@@ -43,7 +43,7 @@ Route::get('/multiplicar', function () {
         $cidade = $request->input('cidade');
         $nascimento = $request->input('nascimento');
     
-        return 'Meu nome é' . $nome . ' Minha idade é ' . $nascimento . 'Na cidade de' . $cidade;
+        return 'Meu nome é' . $nome . ' Meu nascimento é ' . $nascimento . 'Na cidade de' . $cidade;
     });
 
     Route::get('receber/soma', function (Request $request) {
