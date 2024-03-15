@@ -151,3 +151,15 @@ Route::get('/multiplicar', function () {
         $totalcompra= $preço * $compra;
         return ' o total da compra é ' .  $totalcompra;
     });
+
+    Route::get('exemplo/condicao', function(Request $request){
+    $idade = $request->input('idade');
+    $retorno = ";";
+    if($idade >=18){
+    $retorno = " Maior de idade";
+    }
+    else{
+        $retorno = "Menor de idade";
+    }
+    return $retorno;
+    });
