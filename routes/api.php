@@ -353,7 +353,7 @@ Route::get('exercicio/dezenove', function (Request $request) {
 
 Route::get('exercicios/vinte', function (Request $request) {
     $numero01 = $request->input('numero01');
-    $numero02 = $request->input('numer02');
+    $numero02 = $request->input('numero02');
     $soma= $numero01 + $numero02 ;
     if ($soma % 2 == 0){
         $multiplicação= $numero01 * $numero02;
