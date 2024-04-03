@@ -363,3 +363,35 @@ Route::get('exercicios/vinte', function (Request $request) {
         return $divisao;
     }
 });
+
+
+Route::get('exercicio/um', function (Request $request) {
+    $nota01 = $request->input('nota01');
+    $nota02 = $request->input('nota02');
+    $nota03 = $request->input('nota03');
+    $media= ($nota01 + $nota02 + $nota03)/ 3;
+    if ($media > 7){
+        return ' Aprovado ';
+    } else {
+        return ' Reprovado ';
+    }
+});
+
+Route::get('exercicio/dois', function (Request $request) {
+    $renda= $request->input('renda');
+    if ( $renda <= 1900){
+        return 'insento de impostos ';
+    } 
+    if ( 1901 <= 2800){
+        $imposto= $renda / 100 * 7;
+        return ' O imposto é ' . $imposto;
+    }
+    if (2801 <= 3700){
+        $imposto= $renda /100 * 15;
+        return ' O imposto é ' . $imposto;
+    }
+    if ( $renda > 3700){
+    $imposto= $renda /100 * 22;
+    return ' O imposto é ' . $imposto;
+    }
+});
